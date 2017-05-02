@@ -1,0 +1,44 @@
+[
+   {
+      "GSP":"Russia",
+      "SystemAvailability":"99.40",
+      "ProductionIncidents":0,
+      "ProdIncidentsYTD":7
+   },
+   {
+      "GSP":"USSD",
+      "SystemAvailability":"100",
+      "ProductionIncidents":1,
+      "ProdIncidentsYTD":3
+   },
+   {
+      "GSP":"Colombia",
+      "SystemAvailability":"100",
+      "ProductionIncidents":1,
+      "ProdIncidentsYTD":2
+   },
+   {
+      "GSP":"Vietnam",
+      "SystemAvailability":"100",
+      "ProductionIncidents":10,
+      "ProdIncidentsYTD":148
+   },
+   {
+      "GSP":"China-ADD",
+      "SystemAvailability":"100",
+      "ProductionIncidents":1,
+      "ProdIncidentsYTD":93
+   },
+   {
+      "GSP":"CAT",
+      "SystemAvailability":"100",
+      "ProductionIncidents":5,
+      "ProdIncidentsYTD":46
+   },
+   {
+      "GSP":"Banca Gulf",
+      "SystemAvailability":"100",
+      "ProductionIncidents":2,
+      "ProdIncidentsYTD":27
+   }
+]

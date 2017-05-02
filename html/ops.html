@@ -1,0 +1,76 @@
+<donut-chart data="oc.gotData2" xdata="GSP" ydata="SystemAvailability"></donut-chart>
+<div>
+<div id='ops_table1' class = "table-responsive"  >
+  <table id="table-body" class="zui-table zui-table-zebra zui-table-horizontal zui-hover" >
+    <thead>
+      <tr class= "table-title">
+        <th colspan="4">Ops Metrics </th>
+      </tr>
+      <tr>
+        <th> GSP </th>
+        <th> SystemA vailability </th>
+        <th> Production Incidents </th>
+        <th> ProdIncidents YTD </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat = "opsMetric in oc.gotData2">
+        <td><b> {{ opsMetric.GSP }} </b> </td>
+        <td> {{ opsMetric.SystemAvailability }}% </td>
+        <td> {{ opsMetric.ProductionIncidents }} </td>
+        <td> {{ opsMetric.ProdIncidentsYTD }} </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</br></br>
+<div id='ops_table2' class = "table-responsive" >
+  <table id="table-body" class="zui-table zui-table-zebra zui-table-horizontal zui-hover" >
+    <thead>
+      <tr class= "table-title">
+        <th colspan="4">Ops Metrics </th>
+      </tr>
+      <tr>
+        <th> GSvP </th>
+        <th> System Availability </th>
+        <th> Production Incidents </th>
+        <th> ProdIncidents YTD </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat = "opsMetric_info in oc.gotData3">
+        <td> <b>{{ opsMetric_info.GSP }}</b> </td>
+        <td> {{ opsMetric_info.SystemAvailability }}% </td>
+        <td> {{ opsMetric_info.ProductionIncidents }} </td>
+        <td> {{ opsMetric_info.ProdIncidentsYTD }} </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+</br>
+<div class="graph-body">
+    <div class="graph-body-container">
+<div class="widget1">
+  <div class="header1">GSP Production Incidents &amp Prod Incidents YTD</div>
+  <stacked-bar-chart data="oc.gotData2" ydata="SystemAvailability" xdata="GSP" bar-data1="ProductionIncidents" bar-data2="ProdIncidentsYTD"></stacked-bar-chart>
+</div>
+<div class="widget1">
+  <div class="header1">GSvP System Avaibility</div>
+  <pie-chart data="oc.gotData3" pie-data="SystemAvailability"></pie-chart>
+</div>
+<div class="widget1">
+  <div class="header1">GSP Production Incidents </div>
+  <bar-chart data="oc.gotData2" xdata="GSP" ydata="ProductionIncidents"></bar-chart>
+</div>
+        <div class="widget1 compare-bar-body">
+      <div class="header1">GSP Prod Incidents YTD &amp; Production Incidents </div>
+      <compare-bar-chart data="oc.gotData2" xdata="GSP" ydata="ProdIncidentsYTD" bar-data1="ProdIncidentsYTD" bar-data2="ProductionIncidents"></compare-bar-chart>
+    </div>
+    <div class="widget1 compare-bar-body">
+      <div class="header1">GSvP Pdoduction Incidents &amp; Prod Incidents YTD</div>
+      <compare-bar-gsvp-chart data="oc.gotData3" xdata="GSP" bar-data1="ProductionIncidents" bar-data2="ProdIncidentsYTD"></compare-bar-gsvp-chart>
+    </div>
+    </div>
+</div>
+</br>

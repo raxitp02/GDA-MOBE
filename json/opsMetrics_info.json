@@ -1,0 +1,26 @@
+[
+   {
+      "GSP":"US/Expat",
+      "SystemAvailability":"100",
+      "ProductionIncidents":0,
+      "ProdIncidentsYTD":6
+   },
+   {
+      "GSP":"China",
+      "SystemAvailability":"100",
+      "ProductionIncidents":2,
+      "ProdIncidentsYTD":66
+   },
+   {
+      "GSP":"Turkey",
+      "SystemAvailability":"100",
+      "ProductionIncidents":0,
+      "ProdIncidentsYTD":1
+   },
+   {
+      "GSP":"Italy",
+      "SystemAvailability":"99.70",
+      "ProductionIncidents":0,
+      "ProdIncidentsYTD":2
+   }
+]

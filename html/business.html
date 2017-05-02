@@ -1,0 +1,88 @@
+<donut-chart data="bc.gotData" xdata="GSP" ydata="Quote_to_App_Conversion_Rate"></donut-chart>
+<div id='main-table-body1' >
+  <table id="table-body1" class="zui-table zui-table-zebra zui-table-horizontal zui-hover" class = "table-responsive">
+    <thead>
+      <tr class= "table-title">
+        <th colspan="9">Business Metrics </th>
+      </tr>
+      <tr>
+        <th> Launch Time Frame </th>
+        <th> Channel </th>
+        <th> GSP </th>
+        <th> Program to Date </th>
+        <th> Quotes </th>
+        <th> Apps </th>
+        <th> Quote to App Conversion Rate </th>
+        <th> Issued Premium USD </th>
+        <th> #Agents Using Platform </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat = "businessMetric in bc.gotData">
+        <td> {{ businessMetric.Launch_TimeFrame }} </td>
+        <td> {{ businessMetric.Channel}} </td>
+        <td> <b>{{ businessMetric.GSP }} </b></td>
+        <td> {{ businessMetric.Program_to_Date }} </td>
+        <td> {{ businessMetric.Quotes }} </td>
+        <td> {{ businessMetric.Apps }} </td>
+        <td> {{ businessMetric.Quote_to_App_Conversion_Rate }}% </td>
+        <td> ${{ businessMetric.Issued_Premium_USD }} </td>
+        <td> {{ businessMetric.Agents_Using_Platform }} </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</br>
+<div id='main-table-body2' >
+  <table id="table-body2" class="zui-table zui-table-zebra zui-table-horizontal zui-hover" class = "table-responsive">
+    <thead>
+      <tr class= "table-title">
+        <th colspan="6">Business Metrics </th>
+      </tr>
+      <tr>
+        <th> Launch Time Frame </th>
+        <th> Channel </th>
+        <th> GSvP </th>
+        <th> Register </th>
+        <th> Claims </th>
+        <th> Docs/Forms </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat = "businessMetrics_infom in bc.gotData1">
+        <td> {{ businessMetrics_infom.Launch_TimeFrame_info }} </td>
+        <td> {{ businessMetrics_infom.Channel_info }} </td>
+        <td> <b>{{ businessMetrics_infom.GSvP }}</b> </td>
+        <td> {{ businessMetrics_infom.Register_info }} </td>
+        <td> {{ businessMetrics_infom.Claims_info }} </td>
+        <td> {{ businessMetrics_infom.Docs_Forms }} </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</br>
+<div class="graph-body">
+  <div class="graph-body-container">
+    <div class="widget1">
+      <div class="header1">GSP Apps and Qoutes </div>
+      <stacked-bar-chart data="bc.gotData" ydata="Program_to_Date" xdata="GSP" bar-data1="Apps" bar-data2="Quotes"></stacked-bar-chart>
+    </div>
+    <div class="widget1">
+      <div class="header1">GSP Business Metrics - Apps</div>
+      <pie-chart data="bc.gotData" pie-data="Apps"></pie-chart>
+    </div>
+    <div class="widget1">
+      <div class="header1">GSP Business Metrics - Agents Using Platform </div>
+      <bar-chart data="bc.gotData" xdata="GSP" ydata="Agents_Using_Platform"></bar-chart>
+    </div>
+    <div class="widget1 compare-bar-body">
+      <div class="header1">GSP Business Metrics - Agents Using Platform </div>
+      <compare-bar-chart data="bc.gotData" xdata="GSP" ydata="Program_to_Date" bar-data1="Apps" bar-data2="Agents_Using_Platform"></compare-bar-chart>
+    </div>
+    <div class="widget1 compare-bar-body">
+      <div class="header1">GSvP Business Metrics - Claims &amp; Docs/Forms </div>
+      <compare-bar-gsvp-chart data="bc.gotData1" xdata="GSvP" bar-data1="Docs_Forms" bar-data2="Claims_info"></compare-bar-gsvp-chart>
+    </div>
+  </div>
+</div>
+</br>

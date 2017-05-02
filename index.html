@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html ng-app = "d3App" lang="en">
+  <head>
+    <!-- your webpage info goes here -->
+    <title>GDA Tenants Adoption and Metrics Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <link rel="icon" type="image/png" href="../image/ml.png" sizes="16x16">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.3.3/d3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script> <!-- Load AngularJs CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!--LOaded jquery -->
+    <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>       
+    <link rel="stylesheet" href="css/main.css">
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+    <!-- you should always add your stylesheet (css) in the head tag so that it starts loading before the page html is being displayed -->
+  </head>
+  <body background="image/bg.jpg">
+    <div id='mainBody'>
+      <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <a href="index.html">
+              <li>Home</li>
+            </a>
+            <a href="#">
+              <li>About</li>
+            </a>
+            <a ui-sref="business" ui-sref-active="active">
+              <li>Business Metrics</li>
+            </a>
+            <a ui-sref="ops" ui-sref-active="Ops Metrics">
+              <li>Ops Metrics</li>
+            </a>
+          </ul>
+        </div>
+      </nav>
+      <nav class="navbar navbar-default" >
+        <div id="nav-bar-menu" class="container-fluid" >
+          <a href="index.html"><img src="../image/metlife_logo.png" alt="logo" href="index.html" style="width:8%;height:8%; background-image:none !important; position: relative; margin-left:-16%;"></a> 
+          <button ui-sref="business" ui-sref-active="active" class="btn" id="btn-business">Business Metrics</button>
+          <button ui-sref="ops" ui-sref-active="active" class="btn">Ops Metrics</button>
+          <nav role="navigation">
+          </nav>
+          <div id="main-header" > <b>GDA Tenants Adoption and Metrics Dashboard</b> </div>
+        </div>
+      </nav>
+      <ui-view></ui-view>
+    </div>
+    <script type="text/javascript" src="javascripts/app.js"></script>
+    <script type="text/javascript" src="javascripts/Controllers/business-controller.js"></script>
+    <script type="text/javascript" src="javascripts/Controllers/ops-controller.js"></script>
+    <script type="text/javascript" src="javascripts/Services/business-service.js"></script>
+    <script type="text/javascript" src="javascripts/Services/ops-service.js"></script>
+    <script type="text/javascript" src="javascripts/Directives/donut-chart.js"></script>
+    <script type="text/javascript" src="javascripts/Directives/stacked-bar-chart.js"></script>
+    <script type="text/javascript" src="javascripts/Directives/line-chart.js"></script>
+    <script type="text/javascript" src="javascripts/Directives/pie-chart.js"></script>
+    <script type="text/javascript" src="javascripts/Directives/bar-chart.js"></script>
+    <script type="text/javascript" src="javascripts/Directives/compare-bar-chart.js"></script>
+    <script type="text/javascript" src="javascripts/Directives/compare-bar-gsvp-chart.js"></script>    
+    <footer id="footer">
+      <p id="footer-text">Global Digital Analytics</p>
+    </footer>
+  </body>
+</html>

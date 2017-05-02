@@ -1,0 +1,577 @@
+body {
+  background: url(../image/bg.jpg) repeat center center fixed;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+/* HaMburger CSS */
+s
+a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+a:hover
+{
+  color: tomato;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 58px;
+  left: 50px;
+  opacity: .95;
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0;
+  z-index: 2;
+  
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #333;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  opacity: 1;
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+
+#menu
+{
+  position: absolute;
+  width: 200px;
+  margin: -60px 0 0 -50px;
+  padding: 50px;
+  padding-top: 75px;
+  background: #e3e3e3;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 15px;
+}
+
+
+#menuToggle input:checked ~ ul
+{
+  transform: scale(1.0, 1.0);
+  opacity: 1;
+}
+////////////////////////////////
+a img {
+  vertical-align: middle;
+  margin: 0 auto;
+  position: relative;
+  margin-top: .5%;
+  margin-left: 5%;
+}
+#nav-bar-menu {
+  background-color: #ffffff;
+    }
+.navbar navbar-default{
+    height: 20px;
+    
+}
+#main-header {
+    
+  color: #000000;
+  border-bottom: solid 3px #25472d;
+  font-size: 15px;
+  position: relative;
+  text-align: center;
+    clear: both;
+
+}
+.affix {
+  top: 0;
+  width: 100%;
+}
+.affix + .container-fluid {
+  padding-top: 70px;
+}
+/*Button CSS*/
+#btn-business{
+    margin-left:6%;
+}
+
+.btn {
+  background: #007abc;
+  border-color: rgb(0, 97, 160);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 10px;
+  line-height: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  min-width: 35px;
+  width: auto;
+  border: 0 solid transparent;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, .2) 0 1px 1px 0;
+  float: left;
+  position:relative;
+  margin-top: 2.5%;
+  margin-left: 1%;
+  padding: 10px 10px 10px 10px;
+}
+.btn:hover {
+  background: #0061A0;
+  text-decoration: none;
+  color: white;
+}
+
+
+/*Table Format*/
+
+.zui-table {
+  border: solid 1px #ddd;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font: normal 12px Arial, sans-serif;
+  width: 600px;
+  min-width: 55%;
+  margin-left: 3%;
+  box-shadow: 0 0 20px #888888;
+    
+}
+.zui-table thead th {
+  background-color: #2678c7;
+  border: solid 1.5px #ddd;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  text-shadow: 0px 0px 2px #0000;
+}
+.zui-table tbody td {
+  border: solid 1px #ddd;
+  color: #333;
+  padding: 10px;
+  text-shadow: 0px 0px 0px #fff;
+  text-align: center;
+}
+.zui-table-zebra tbody tr:nth-child(odd) {
+  background-color: #ccedff;
+}
+.zui-table-zebra tbody tr:nth-child(even) {
+  background-color: #fff;
+}
+.zui-table-horizontal tbody td {
+  border-left: none;
+  border-right: none;
+}
+.table-responsive {
+  overflow-x: auto;
+}
+.table-header {
+  width: 10%;
+}
+
+/* Donut Graph Body */
+
+.widget {
+  position: relative;
+  margin: 3% auto;
+  top: 5%;
+  right: 5%;
+  width: 440px;
+  margin-top: 20px;
+  background-color: #ffffff;
+  border-radius: 5px transparent;
+  box-shadow: 0 0 20px #888888;
+  float: right;
+}
+.header {
+  background-color: #007abc;
+  height: 10%;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  border-top-left-radius: 7px transparent;
+  border-top-right-radius: 7px transparent;
+  font-weight: 400;
+  font-size: 1.5em;
+  text-shadow: 1px 1px #06060d;
+}
+.chart-container {
+  padding: 20px;
+}
+.shadow {
+  -webkit-filter: drop-shadow( 0px 3px 3px rgba(0, 0, 0, .5));
+  filter: drop-shadow( 0px 3px 3px rgba(0, 0, 0, .5));
+}
+/* Bar Chart CSS */
+
+.widget1 {
+  margin: 0 auto;
+  margin-left: 5%;
+  margin-bottom: 2%;
+  width: 350px;
+  margin-top: 50px;
+  background-color: #fff;
+  -background-color: #222D3A;
+  border-radius: 5px transparent;
+  box-shadow: 0 0 20px #888888;
+  float: left;
+}
+.header1 {
+  background-color: #007abc;
+  height: 40px;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  font-weight: 400;
+  font-size: 1em;
+  text-shadow: 0px 0px #fff;
+  border-bottom: 1px solid #eaeaea;
+}
+.chart-container1 {
+  padding: 25px;
+  font-size: 8px;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+/* Pie Chart */
+
+
+}
+.header2 {
+  background-color: #007abc;
+  height: 40px;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  font-weight: 400;
+  font-size: .8em;
+  text-shadow: 0px 0px #fff;
+  border-bottom: 1px solid #eaeaea;
+}
+.chart-container2 {
+  padding: 25px;
+  font-size: 8px;
+  box-shadow: 0 0 20px #888888;
+}
+
+.chart-container3 {
+  padding: 25px;
+  font-size: 9px;
+  box-shadow: 0 0 20px #888888;
+    color: white;
+}
+
+//
+.arc:hover {
+  fill: #00cccc ;
+}
+/* Bar Chart - 3 */
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: #ff9966;
+}
+
+.bar:hover {
+  fill: #00cccc ;
+}
+
+.x.axis path {
+  display: inline;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 5px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
+.widget:hover, .widget1:hover {
+    box-shadow: 0 0 35px #000000;
+}
+
+#tooltip {
+	position: absolute;
+	width: 95px;
+	height: auto;
+	padding: 10px;
+	background-color: white;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+	pointer-events: none;
+}
+#tooltip.hidden {
+	display: none;
+}
+#tooltip p {
+	margin: 0;
+	font-family: sans-serif;
+	font-size: 12px;
+	line-height: 16px;
+}
+.indent{
+	padding-left: 5px;
+}
+.heading{
+	font-weight: bold;
+}
+#keyword{
+	color: red;
+	font-style: italic;
+}
+rect {
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+rect:hover{
+	fill: orange;
+}
+.axis path,
+.axis line {
+	fill: none;
+	stroke: black;
+	shape-rendering: crispEdges;
+}
+.axis text {
+	font-family: sans-serif;
+	font-size: 9px;
+}
+
+
+/* BusinessMetrics Graph Div */
+.graph-body {
+  height: 900px; 
+  width: 100%; 
+ opacity: .85;
+  background-color: #fff;
+    background: -webkit-linear-gradient(#b3b3b3, #e6e6e6); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#b3b3b3, #e6e6e6); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#b3b3b3, #e6e6e6); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#b3b3b3, #e6e6e6); /* Standard syntax (must be last) */
+}
+  
+}
+
+.graph-body-container{
+    height:500px;
+    width: 1400px;
+    
+}
+
+/* New Pie Chart CSS */
+
+.label-text {
+    alignment-baseline: middle;
+    font-size: 12px;
+    font-family: arial,helvetica,"sans-serif";
+    fill: #393939;
+}
+.label-line {
+    stroke-width: 1px;
+    stroke: #393939;
+}
+.label-circle {
+    fill: #393939;
+}
+
+
+
+#footer {
+    width: 100%;
+    height: 30px;
+    clear: both;
+    bottom: 0;
+    padding: 0;
+    margin-top: 0;
+    /* ATTENTION! The following elements below 
+    can be set to whatever your heart desires */
+    height: 30px; /* REMEMBER height = padding-bottom */
+    background: #333;
+}
+#footer-text{
+    font-size: 15px;
+    text-shadow: 0 0 35px #888888;
+    color: white;
+}
+
+/* compare Bar CSS */
+
+.compare-bar-body {
+  margin: 0 auto;
+  margin-left: 8%;
+  margin-bottom: 2%;
+  width: 520px;
+  margin-top: 50px;
+  background-color: #fff;
+  -background-color: #222D3A;
+  border-radius: 5px transparent;
+  box-shadow: 0 0 20px #888888;
+  float: left;
+  
+}
+.compare-bar-body:hover {
+    box-shadow: 0 0 35px #000000;
+}
+
+#tooltip {
+    position: absolute;
+    width: 90px;
+    height: auto;
+    padding: 10px;
+    background-color: white;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+}
+#tooltip.hidden {
+    display: none;
+}
+#tooltip p {
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+}
+.indent {
+    padding-left: 5px;
+}
+rect {
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+rect:hover {
+    fill: tomato;
+}
+.axis path, .axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+
+/* Horizontal Bar graph */
+
+
