@@ -467,6 +467,14 @@ rect:hover{
     background: linear-gradient(#b3b3b3, #e6e6e6); /* Standard syntax (must be last) */
 }
   
+.border-div{
+    width:100%;
+    height:20px;
+  background: #3399ff; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #3399ff, #0000ff,#33cc33); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #3399ff, #0000ff,#33cc33); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #3399ff, #0000ff,#33cc33); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #3399ff, #0000ff,#33cc33); /* Standard syntax */
 }
 
 .graph-body-container{
