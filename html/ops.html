@@ -1,3 +1,30 @@
+<div class="graph-body">
+    <div class="graph-body-container">
+<div class="widget1">
+  <div class="header1">GSP Production Incidents &amp Prod Incidents YTD</div>
+  <stacked-bar-chart data="oc.gotData2" ydata="SystemAvailability" xdata="GSP" bar-data1="ProductionIncidents" bar-data2="ProdIncidentsYTD"></stacked-bar-chart>
+</div>
+<div class="widget1">
+  <div class="header1">GSvP System Avaibility</div>
+  <pie-chart data="oc.gotData3" pie-data="SystemAvailability"></pie-chart>
+</div>
+<div class="widget1">
+  <div class="header1">GSP Production Incidents </div>
+  <bar-chart data="oc.gotData2" xdata="GSP" ydata="ProductionIncidents"></bar-chart>
+</div>
+        <div class="widget1 compare-bar-body">
+      <div class="header1">GSP Prod Incidents YTD &amp; Production Incidents </div>
+      <compare-bar-chart data="oc.gotData2" xdata="GSP" ydata="ProdIncidentsYTD" bar-data1="ProdIncidentsYTD" bar-data2="ProductionIncidents"></compare-bar-chart>
+    </div>
+    <div class="widget1 compare-bar-body">
+      <div class="header1">GSvP Pdoduction Incidents &amp; Prod Incidents YTD</div>
+      <compare-bar-gsvp-chart data="oc.gotData3" xdata="GSP" bar-data1="ProductionIncidents" bar-data2="ProdIncidentsYTD"></compare-bar-gsvp-chart>
+    </div>
+    </div>
+</div>
+ <div class="border-div"></div>
+</br>
+
 <donut-chart data="oc.gotData2" xdata="GSP" ydata="SystemAvailability"></donut-chart>
 <div>
 <div id='ops_table1' class = "table-responsive"  >
@@ -47,31 +74,5 @@
     </tbody>
   </table>
 </div>
-</div>
-<div class="border-div"></div>
-</br>
-<div class="graph-body">
-    <div class="graph-body-container">
-<div class="widget1">
-  <div class="header1">GSP Production Incidents &amp Prod Incidents YTD</div>
-  <stacked-bar-chart data="oc.gotData2" ydata="SystemAvailability" xdata="GSP" bar-data1="ProductionIncidents" bar-data2="ProdIncidentsYTD"></stacked-bar-chart>
-</div>
-<div class="widget1">
-  <div class="header1">GSvP System Avaibility</div>
-  <pie-chart data="oc.gotData3" pie-data="SystemAvailability"></pie-chart>
-</div>
-<div class="widget1">
-  <div class="header1">GSP Production Incidents </div>
-  <bar-chart data="oc.gotData2" xdata="GSP" ydata="ProductionIncidents"></bar-chart>
-</div>
-        <div class="widget1 compare-bar-body">
-      <div class="header1">GSP Prod Incidents YTD &amp; Production Incidents </div>
-      <compare-bar-chart data="oc.gotData2" xdata="GSP" ydata="ProdIncidentsYTD" bar-data1="ProdIncidentsYTD" bar-data2="ProductionIncidents"></compare-bar-chart>
-    </div>
-    <div class="widget1 compare-bar-body">
-      <div class="header1">GSvP Pdoduction Incidents &amp; Prod Incidents YTD</div>
-      <compare-bar-gsvp-chart data="oc.gotData3" xdata="GSP" bar-data1="ProductionIncidents" bar-data2="ProdIncidentsYTD"></compare-bar-gsvp-chart>
-    </div>
-    </div>
 </div>
 </br>

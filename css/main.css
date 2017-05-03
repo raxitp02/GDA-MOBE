@@ -209,8 +209,10 @@ a img {
   font: normal 12px Arial, sans-serif;
   width: 600px;
   min-width: 55%;
-  margin-left: 3%;
   box-shadow: 0 0 20px #888888;
+    position: relative;
+    margin-left: auto;
+    margin-right: 3%;
     
 }
 .zui-table thead th {
@@ -251,13 +253,13 @@ a img {
   position: relative;
   margin: 3% auto;
   top: 5%;
-  right: 5%;
+  left: 5%;
   width: 440px;
   margin-top: 20px;
   background-color: #ffffff;
   border-radius: 5px transparent;
   box-shadow: 0 0 20px #888888;
-  float: right;
+  float: left;
 }
 .header {
   background-color: #007abc;

@@ -41,6 +41,7 @@ myApp.directive('pieChart', function($http) {
             .selectAll('.arc')
             .data(pie(data))
             .enter()
+          
             .append('g')
             .attr('class', "arc");
 

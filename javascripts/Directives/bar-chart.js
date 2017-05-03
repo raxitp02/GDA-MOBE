@@ -6,7 +6,7 @@ myApp.directive('barChart', function($http) {
       xdata: '@',
       ydata: '@'
     },
-    template: '<div id="samplebar" class="chart-container2"></div>',
+    template: '<div id="samplebar" class="chart-container2 svg-container"></div>',
     link: function(scope) {
       scope.$watch('data', function(newVal) {
         var data = newVal;
