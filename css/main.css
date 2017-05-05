@@ -144,6 +144,7 @@ a img {
 }
 #nav-bar-menu {
   background-color: #ffffff;
+    border-bottom: solid 3px #25472d;
     }
 .navbar navbar-default{
     height: 20px;
@@ -152,7 +153,6 @@ a img {
 #main-header {
     
   color: #000000;
-  border-bottom: solid 3px #25472d;
   font-size: 15px;
   position: relative;
   text-align: center;
