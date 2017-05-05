@@ -262,13 +262,13 @@ a img {
   float: left;
 }
 .header {
-  background-color: #007abc;
+  background-color: rgb(0, 97, 160);
   height: 10%;
   color: #fff;
   text-align: center;
   line-height: 40px;
   font-weight: 400;
-  font-size: 1.5em;
+    font-size: 1.5em;
   text-shadow: 1px 1px #06060d;
 }
 .chart-container {
@@ -293,7 +293,7 @@ a img {
   float: left;
 }
 .header1 {
-  background-color: #007abc;
+  background-color: rgb(0, 97, 160);
   height: 40px;
   color: #fff;
   text-align: center;
@@ -319,7 +319,7 @@ a img {
 
 }
 .header2 {
-  background-color: #007abc;
+  background-color: rgb(0, 97, 160);
   height: 40px;
   color: #fff;
   text-align: center;
