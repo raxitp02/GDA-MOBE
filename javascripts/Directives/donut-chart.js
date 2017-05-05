@@ -85,7 +85,7 @@ myApp.directive('donutChart', function($http, $timeout) {
               })
               .style({
                 fill: '#000000',
-                'font-size': '15px',
+                'font-size': '14px',
                 'font-weight': 8000,
               });
 
@@ -102,7 +102,7 @@ myApp.directive('donutChart', function($http, $timeout) {
                 class: 'legend',
                 transform: function(d, i) {
                   //Just a calculation for x & y position
-                  return 'translate(-45,' + ((i * legendHeight) - 100) + ')';
+                  return 'translate(-50,' + ((i * legendHeight) - 90) + ')';
                 }
               });
             legend.append('rect')
