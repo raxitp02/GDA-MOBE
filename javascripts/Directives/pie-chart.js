@@ -18,7 +18,7 @@ myApp.directive('pieChart', function($http) {
               'height': 280
             });
 
-          var colors = ['#eeccff', '#cc66ff'];
+          var colors = ['#377EB8', '#4DAF4A'];
 
           var colorscale = d3.scale.linear().domain([0, data.length]).range(colors);
 

@@ -53,7 +53,7 @@ myApp.directive('stackedBarChart', function($http, $timeout) {
           var yAxis = d3.svg.axis()
             .scale(yScale)
             .orient("left")
-            .ticks(5);
+            .ticks(8);
 
           var commaFormat = d3.format(',');
 

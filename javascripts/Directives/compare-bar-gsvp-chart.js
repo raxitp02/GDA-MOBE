@@ -48,7 +48,7 @@ myApp.directive('compareBarGsvpChart', function($http) {
           var yAxis = d3.svg.axis()
             .scale(yScale)
             .orient("left")
-            .ticks(5);
+            .ticks(10);
 
           var commaFormat = d3.format(',');
 
@@ -142,15 +142,15 @@ myApp.directive('compareBarGsvpChart', function($http) {
           // Labels
           sets.append("text")
             .attr("class", "Docs_Forms")
-            .attr("width", xScale.rangeBand() / 2)
+            .attr("width", xScale.rangeBand() / 1.5)
             .attr("y", function(d) {
               return yScale(d[barData1]);
             })
             .attr("dy", 0)
-            .attr("dx", (xScale.rangeBand() / 1.60))
+            .attr("dx", (xScale.rangeBand() / 1.5))
             //  .attr("text-anchor", "middle")
-            .attr("font-family", "sans-serif")
-            .attr("font-size", "10px")
+            .attr("font-family", "verdana")
+            .attr("font-size", "8px")
             .attr("fill", "black")
             .text(function(d) {
               return commaFormat(d[barData1]);
@@ -162,11 +162,12 @@ myApp.directive('compareBarGsvpChart', function($http) {
               return yScale(d[barData2]);
             })
             .attr("dy", 0)
-            .attr("dx", (xScale.rangeBand() / 4) - 10)
+            .attr("dx", (xScale.rangeBand() / 4) - 4)
             //  .attr("text-anchor", "middle")
-            .attr("font-family", "sans-serif")
-            .attr("font-size", "10px")
-            .attr("fill", "red")
+            .attr("font-family", "verdana")
+            .style("text-anchor", "middle")
+            .attr("font-size", "8px")
+            .attr("fill", "black")
             .text(function(d) {
               return commaFormat(d[barData2]);
             });

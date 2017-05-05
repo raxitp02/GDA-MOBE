@@ -50,7 +50,7 @@ myApp.directive('compareBarChart', function($http) {
           var yAxis = d3.svg.axis()
             .scale(yScale)
             .orient("left")
-            .ticks(5);
+            .ticks(10);
 
           var commaFormat = d3.format(',');
 
@@ -149,10 +149,10 @@ myApp.directive('compareBarChart', function($http) {
               return yScale(d[barData1]);
             })
             .attr("dy", 0)
-            .attr("dx", (xScale.rangeBand() / 2))
-            //  .attr("text-anchor", "middle")
-            .attr("font-family", "sans-serif")
-            .attr("font-size", "10px")
+            .attr("dx", (xScale.rangeBand() / 1.4))
+            .attr("text-anchor", "middle")
+            .attr("font-family", "verdana")
+            .attr("font-size", "8px")
             .attr("fill", "black")
             .text(function(d) {
               return commaFormat(d[barData1]);
@@ -166,10 +166,10 @@ myApp.directive('compareBarChart', function($http) {
             .attr("dy", 0)
             .attr("dx", (xScale.rangeBand() / 4) - 0)
             //  .attr("text-anchor", "middle")
-            .attr("font-family", "sans-serif")
-            .attr("font-size", "10px")
+            .attr("font-family", "verdana")
+            .attr("font-size", "8px")
             .style("text-anchor", "middle")
-            .attr("fill", "red")
+            .attr("fill", "black")
             .text(function(d) {
               return commaFormat(d[barData2]);
             });

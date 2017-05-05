@@ -43,7 +43,7 @@ myApp.directive('barChart', function($http) {
             .attr('class', 'd3-tip')
             .offset([-10, 0.5])
             .html(function(d) {
-              return "<strong></strong> <span style='color:red'>" + d[yData] + "</span>";
+              return "<strong></strong> <span style='color:white'>" + d[yData] + "</span>";
             })
 
           if (data) {
