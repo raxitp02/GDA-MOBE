@@ -23,7 +23,7 @@ myApp.directive('compareBarChart', function($http) {
               bottom: 55,
               left: 55
             },
-            w = 500 - margin.left - margin.right,
+            w = 400 - margin.left - margin.right,
             h = 280 - margin.top - margin.bottom;
           var padding = 10;
 

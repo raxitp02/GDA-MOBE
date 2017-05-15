@@ -76,7 +76,7 @@ myApp.directive('barChart', function($http) {
             .attr("y", 10)
             .attr("dy", ".5em")
             .style("text-anchor", "end")
-          //.text("Agents_Using_Platform");
+          
 
           svg.selectAll(".bar")
             .data(data)

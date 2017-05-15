@@ -60,8 +60,8 @@ myApp.directive('stackedBarChart', function($http, $timeout) {
           //SVG element
           var svg = d3.select("#barChart")
             .append("svg")
-            .attr("width", w + margin.left + margin.right)
-            .attr("height", h + margin.top + margin.bottom)
+            .attr("width", w + margin.left + margin.right,"100%")
+            .attr("height", h + margin.top + margin.bottom, "100%" )
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 

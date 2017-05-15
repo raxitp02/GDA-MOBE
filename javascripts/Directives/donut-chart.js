@@ -25,7 +25,7 @@ myApp.directive('donutChart', function($http, $timeout) {
             h = 420;
 
           var outerRadius = w / 2;
-          var innerRadius = 130;
+          var innerRadius = 140;
 
           var color = d3.scale.category10();
 
@@ -78,8 +78,8 @@ myApp.directive('donutChart', function($http, $timeout) {
                 return "translate(" + arc.centroid(d) + ")";
               })
 
-              .attr("dy", "0.1em")
-              .attr("text-anchor", "top")
+              .attr("dy", "0.09em")
+              .attr("text-anchor", "middle")
               .text(function(d) {
                 return d.data[ydata] + "%";
               })
@@ -90,7 +90,7 @@ myApp.directive('donutChart', function($http, $timeout) {
               });
 
             var legendRectSize = 20;
-            var legendSpacing = 7;
+            var legendSpacing = 10;
             var legendHeight = legendRectSize + legendSpacing;
 
 
@@ -102,14 +102,14 @@ myApp.directive('donutChart', function($http, $timeout) {
                 class: 'legend',
                 transform: function(d, i) {
                   //Just a calculation for x & y position
-                  return 'translate(-50,' + ((i * legendHeight) - 90) + ')';
+                  return 'translate(-50,' + ((i * legendHeight) - 100) + ')';
                 }
               });
             legend.append('rect')
               .attr({
                 width: legendRectSize,
                 height: legendRectSize,
-                rx: 20,
+                rx: 40,
                 ry: 20
               })
               .style({

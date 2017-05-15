@@ -19,40 +19,25 @@
     <!-- you should always add your stylesheet (css) in the head tag so that it starts loading before the page html is being displayed -->
   </head>
   <body background="image/bg.jpg">
-    <div id='mainBody'>
-      <nav role="navigation">
-        <div id="menuToggle">
-          <input type="checkbox" />
-          <span></span>
-          <span></span>
-          <span></span>
-          <ul id="menu">
-            <a href="index.html">
-              <li>Home</li>
-            </a>
-            <a href="#">
-              <li>About</li>
-            </a>
-            <a ui-sref="business" ui-sref-active="active">
-              <li>Business Metrics</li>
-            </a>
-            <a ui-sref="ops" ui-sref-active="Ops Metrics">
-              <li>Ops Metrics</li>
-            </a>
-          </ul>
+    <div id='mainBody' class="container-fluid">
+    <div class="row" style="height: 110px">
+      <nav style="top: 0; z-index: 1041; position: fixed; width: 100%">
+        <div id="nav-bar-menu" class="container-fluid" style="padding-top: 15px">
+          <div class="row" style="padding-bottom: 15px">
+              <div class="col-md-5">
+                  <button ui-sref="business" ui-sref-active="active" class="btn" style="margin: 0px 10px 0px 0px !important;">Business Metrics</button>
+                  <button ui-sref="ops" ui-sref-active="active" class="btn" style="margin: 0px !important">Ops Metrics</button>
+              </div>
+              <div class="col-md-7">
+                  <a href="index.html"><img src="../image/metlife_logo.png" alt="logo" href="index.html" style="width: 150px;height: 35px; background-image:none !important;"></a> 
+              </div>
+            </div>
+          <div class="row" id="main-header" style="text-align: center; background-color: #010101; color: white"> <h3 style="margin-top: 10px !important">GDA Tenants Adoption and Metrics Dashboard</h3> </div>
         </div>
       </nav>
-      <nav>
-        <div id="nav-bar-menu" class="container-fluid" >
-          <a href="index.html"><img src="../image/metlife_logo.png" alt="logo" href="index.html" style="width:8%;height:8%; background-image:none !important; position: relative; margin-left:-16%;"></a> 
-          <button ui-sref="business" ui-sref-active="active" class="btn" id="btn-business">Business Metrics</button>
-          <button ui-sref="ops" ui-sref-active="active" class="btn">Ops Metrics</button>
-          <nav role="navigation">
-          </nav>
-          <div id="main-header" > <b>GDA Tenants Adoption and Metrics Dashboard</b> </div>
-        </div>
-      </nav>
+    </div>
       <ui-view></ui-view>
+      
     </div>
     <script type="text/javascript" src="javascripts/app.js"></script>
     <script type="text/javascript" src="javascripts/Controllers/business-controller.js"></script>
