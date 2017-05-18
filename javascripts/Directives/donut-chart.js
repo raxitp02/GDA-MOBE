@@ -6,7 +6,7 @@ myApp.directive('donutChart', function($http, $timeout) {
       xdata: '@',
       ydata: '@'
     },
-    templateUrl: 'html/donutChart.html',
+    template: '<div id="chart" class="chart-container2 svg-container"></div>',
     link: function(scope) {
 
       scope.$watch('data', function(newVal) {
@@ -22,7 +22,7 @@ myApp.directive('donutChart', function($http, $timeout) {
             .padAngle(.03);
 
           var w = 400,
-            h = 420;
+            h = 400;
 
           var outerRadius = w / 2;
           var innerRadius = 140;
@@ -35,13 +35,12 @@ myApp.directive('donutChart', function($http, $timeout) {
 
           var svg = d3.select("#chart")
             .append("svg")
+            .attr("preserveAspectRatio", "xMinYMin meet")
+            .attr("viewBox", "0 0 440 600")
+            .classed("svg-content", true).append('g')
             .attr({
-              width: w,
-              height: h,
+              transform: 'translate(' + w / 2 + ',' + h / 2 + ')',
               class: 'shadow'
-            }).append('g')
-            .attr({
-              transform: 'translate(' + w / 2 + ',' + h / 2 + ')'
             });
           var path = svg.selectAll('path')
             .data(pie(dataset))

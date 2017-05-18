@@ -8,7 +8,7 @@ myApp.directive('stackedBarChart', function($http, $timeout) {
       barData1: '@',
       barData2: '@'
     },
-    template: '<div id="barChart" class="chart-container1"></div>',
+    template: '<div id="barChart" class="chart-container1 svg-container"></div>',
     link: function(scope) {
 
       scope.$watch('data', function(newVal) {
@@ -60,8 +60,9 @@ myApp.directive('stackedBarChart', function($http, $timeout) {
           //SVG element
           var svg = d3.select("#barChart")
             .append("svg")
-            .attr("width", w + margin.left + margin.right,"100%")
-            .attr("height", h + margin.top + margin.bottom, "100%" )
+            .attr("preserveAspectRatio", "xMinYMin meet")
+            .attr("viewBox", "0 0 330 500")
+            .classed("svg-content", true)
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 

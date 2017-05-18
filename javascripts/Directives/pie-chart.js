@@ -5,7 +5,7 @@ myApp.directive('pieChart', function($http) {
       data: '=',
       pieData: '@'
     },
-    template: '<div id="chartPie" class="chart-container3"></div>',
+    template: '<div id="chartPie" class="chart-container3 svg-container"></div>',
     link: function(scope) {
       scope.$watch('data', function(newVal) {
         var data = newVal;
@@ -13,10 +13,9 @@ myApp.directive('pieChart', function($http) {
         if (data) {
           var canvas = d3.select('#chartPie')
             .append('svg')
-            .attr({
-              'width': 330,
-              'height': 280
-            });
+            .attr("preserveAspectRatio", "xMinYMin meet")
+            .attr("viewBox", "0 0 330 280")
+            .classed("svg-content", true);
 
           var colors = ['#377EB8', '#4DAF4A'];
 

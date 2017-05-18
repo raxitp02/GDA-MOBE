@@ -8,7 +8,7 @@ myApp.directive('compareBarChart', function($http) {
       barData1: '@',
       barData2: '@'
     },
-    template: '<div id="compare-bar" class="chart-container2"></div>',
+    template: '<div id="compare-bar" class="chart-container2 svg-container"></div>',
     link: function(scope) {
       scope.$watch('data', function(newVal) {
         var dataset = newVal;
@@ -18,13 +18,13 @@ myApp.directive('compareBarChart', function($http) {
         var yData = scope.ydata;
         if (dataset) {
           var margin = {
-              top: 25,
+              top: 85,
               right: 45,
               bottom: 55,
               left: 55
             },
             w = 400 - margin.left - margin.right,
-            h = 280 - margin.top - margin.bottom;
+            h = 330 - margin.top - margin.bottom;
           var padding = 10;
 
           var colors = [
@@ -57,8 +57,9 @@ myApp.directive('compareBarChart', function($http) {
           //SVG element
           var svg = d3.select("#compare-bar")
             .append("svg")
-            .attr("width", w + margin.left + margin.right)
-            .attr("height", h + margin.top + margin.bottom)
+            .attr("preserveAspectRatio", "xMinYMin meet")
+            .attr("viewBox", "0 0 370 500")
+            .classed("svg-content", true)
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
